@@ -47,11 +47,31 @@
 
         header {
             text-align: center;
-            padding: 20px;
-            background-color: var(--header-bg);
+            padding: 100px 20px;
+            background-image: url('ziekenhuis.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             color: var(--header-text);
             border-radius: 5px;
             margin-bottom: 24px;
+            position: relative;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+        }
+
+        header h1, header p {
+            position: relative;
+            z-index: 1;
         }
 
         /* Theme toggle switch styling */
@@ -117,6 +137,7 @@
         /* Form styling updates */
         .form-group {
             margin-bottom: 24px;
+            width: 100%;
         }
 
         .form-group label {
@@ -144,6 +165,11 @@
 
         textarea {
             height: 150px;
+            resize: vertical;
+        }
+
+        .feedback-form {
+            width: 100%;
         }
 
         button {
